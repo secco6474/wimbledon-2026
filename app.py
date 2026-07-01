@@ -389,7 +389,7 @@ with st.expander("⚙️ Pannello Amministratore (Inserimento Risultati Ufficial
         adm_ita_primo = st.selectbox("LA CAPORETTO AZZURRA (Numero finale di Italiani eliminati al Primo Turno):", lista_italiani_primo, index=lista_italiani_primo.index(risultati_uff["Italiani fuori al Primo"]) if "Italiani fuori al Primo" in risultati_uff and risultati_uff["Italiani fuori al Primo"] in lista_italiani_primo else 0)
         adm_ita_ritirati = st.selectbox("IL DRAMMA DEGLI INFORTUNI (Numero finale di Italiani ritirati nei primi due turni):", lista_italiani_ritirati, index=lista_italiani_ritirati.index(risultati_uff["Italiani Ritirati"]) if "Italiani Ritirati" in risultati_uff and risultati_uff["Italiani Ritirati"] in lista_italiani_ritirati else 0)
         
-        def_q = [x.strip() for x in risultati_uff["Quarti"].split(", ")] if risultati_uff["Quarti"] else None
+        def_q = [x.strip() for x in risultati_uff["Quarti"].split(", ")] if isinstance(risultati_uff["Quarti"], str) and pd.notna(risultati_uff["Quarti"]) else None
         adm_q = st.multiselect("Quanti e quali atleti sono passati ai Quarti reali?", lista_atp, default=def_q)
         
         def_s = [x.strip() for x in risultati_uff["Semi"].split(", ")] if risultati_uff["Semi"] else None
