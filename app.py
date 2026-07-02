@@ -5,7 +5,7 @@ import os
 st.set_page_config(page_title="Wimbledon 2026", layout="wide")
 
 # CONFIGURAZIONI FILE
-FILE_SALVATAGGIO = "pronostici_wimbledon.csv"
+FILE_SALVATAGGIO = "https://raw.githubusercontent.com/secco6474/wimbledon-2026/main/pronostici_wimbledon.csv"
 FILE_RISULTATI = "risultati_ufficiali.csv"
 PASSWORD_ADMIN = "admin123"  # Modificala se preferisci una password diversa
 
