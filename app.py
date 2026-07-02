@@ -7,7 +7,7 @@ st.set_page_config(page_title="Wimbledon 2026", layout="wide")
 #CONFIGURAZIONI FILE
 FILE_SALVATAGGIO = "pronostici_wimbledon.csv"
 FILE_RISULTATI = "risultati_ufficiali.csv"
-PASSWORD_ADMIN = "admin123"
+PASSWORD_ADMIN = "secco123"
 
 # STILE GRAFICO AVANZATO
 st.markdown("""
